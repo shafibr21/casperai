@@ -15,7 +15,7 @@ const Page = async () => {
 
   return (
     <main>
-      <h1>Popular Companions</h1>
+      <h1 className="dark:text-slate-500">Popular Companions</h1>
 
         <section className="home-section">
             {companions.map((companion) => (
