@@ -34,16 +34,16 @@ const Profile = async () => {
             height={110}
           />
           <div className="flex flex-col gap-2">
-            <h1 className="font-bold text-2xl">
+            <h1 className="font-bold text-2xl dark:text-slate-500">
               {user.firstName} {user.lastName}
             </h1>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground dark:text-slate-500">
               {user.emailAddresses[0].emailAddress}
             </p>
           </div>
         </div>
         <div className="flex gap-4">
-          <div className="border border-black rouded-lg p-3 gap-2 flex flex-col h-fit">
+          <div className="border border-black rounded-2xl p-3 gap-2 flex flex-col h-fit">
             <div className="flex gap-2 items-center">
               <Image
                 src="/icons/check.svg"
@@ -51,16 +51,16 @@ const Profile = async () => {
                 width={22}
                 height={22}
               />
-              <p className="text-2xl font-bold">{sessionHistory.length}</p>
+              <p className="text-2xl font-bold dark:text-slate-500">{sessionHistory.length}</p>
             </div>
-            <div>Lessons completed</div>
+            <div className="dark:text-slate-500">Lessons completed</div>
           </div>
-          <div className="border border-black rouded-lg p-3 gap-2 flex flex-col h-fit">
+          <div className="border border-black rounded-2xl p-3 gap-2 flex flex-col h-fit">
             <div className="flex gap-2 items-center">
               <Image src="/icons/cap.svg" alt="cap" width={22} height={22} />
-              <p className="text-2xl font-bold">{companions.length}</p>
+              <p className="text-2xl font-bold dark:text-slate-500">{companions.length}</p>
             </div>
-            <div>Companions created</div>
+            <div className="dark:text-slate-500">Companions created</div>
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@ const Profile = async () => {
           </AccordionContent>
         </AccordionItem> */}
         <AccordionItem value="recent">
-          <AccordionTrigger className="text-2xl font-bold">
+          <AccordionTrigger className="text-2xl font-bold dark:text-slate-500">
             Recent Sessions
           </AccordionTrigger>
           <AccordionContent>
@@ -88,7 +88,7 @@ const Profile = async () => {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="companions">
-          <AccordionTrigger className="text-2xl font-bold">
+          <AccordionTrigger className="text-2xl font-bold dark:text-slate-500">
             My Companions {`(${companions.length})`}
           </AccordionTrigger>
           <AccordionContent>
